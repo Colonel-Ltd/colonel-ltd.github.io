@@ -139,7 +139,7 @@ function getApi() {
             var response = res.data;
 		
 		 response.forEach((song, index) => {
-        $("#SongsListArea").append("<tr><td class='center aligned'>"+(index+1)+"</td><td class='center aligned'>"+song.image+"</td><td class='center aligned'>"+song.name+"</td></tr>")
+        $("#SongsListArea").append("<tr><td class='center aligned'>"+(index+1)+"</td><td class='center aligned'>"+song.image+"</td><td class='center aligned'>"+song.name+"</td><td class='center aligned'>"+(song.ts)+"</td><td class='center aligned'>"+(song.price)+"</td></tr>")
     })
            console.log(response)
         })
