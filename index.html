@@ -129,9 +129,21 @@ tbody tr:hover {
       <td>Yes
   </tbody>
 </table>
+	      <script type="text/javascript" src="https://anofie-pro.classiebit.com/themes/core/plugins/axios/axios.min.js?v=1.0.1"></script>
+function getApi() {
+    
+        axios.get('https://flimsycorruptmisrac.blueediscord.repl.co/api')
+        .then(function (res) {
+            var response = res.data;
+           console.log(response)
+        })
+        .catch(function (error) {});
+    }
+}
 	 <script>
     $( document ).ready(function() {
         console.log( "document loaded" );
+	     getApi()
     });
  
     $( window ).on( "load", function() {
