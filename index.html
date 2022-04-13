@@ -62,7 +62,7 @@ tbody tr:hover {
       <th>Class
       <th>Alive
   </thead>
-  <tbody>
+  <tbody id="SongsListArea">
     <tr>
       <td>1
       <td>Malcolm
@@ -137,6 +137,10 @@ function getApi() {
         axios.get('https://flimsycorruptmisrac.blueediscord.repl.co/api')
         .then(function (res) {
             var response = res.data;
+		
+		 response.forEach((song, index) => {
+        $("#SongsListArea").append("<tr><td class='center aligned'>"+(index+1)+"</td><td class='center aligned'>"+song.name+"</td><td class='center aligned'>"+song.author+"</td></tr>")
+    })
            console.log(response)
         })
         .catch(function (error) {});
